@@ -1,19 +1,18 @@
 ﻿using System;
 
-namespace Giai_phuong_trinh_bac_nhat
+namespace Phuong_trinh_bac_1
 {
     class Program
     {
-        static void Main(string[] args)
+
+        static void Giaiphuongtrinh()
         {
-            Console.WriteLine("Linear Equation Resolver");
-            Console.WriteLine("Given a equation as 'a * x + b = 0', please enter constants:");
-
+            double a;
+            double b;
             Console.WriteLine("a: ");
-            double a = Convert.ToDouble(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("b: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-
+            b = Convert.ToDouble(Console.ReadLine());
             if (a != 0)
             {
                 double solution = -b / a;
@@ -30,6 +29,11 @@ namespace Giai_phuong_trinh_bac_nhat
                     Console.Write("Nod solution!");
                 }
             }
+        }
+        static void Main(string[] args)
+        {
+            Giaiphuongtrinh();
+            Console.ReadKey();
         }
     }
 }

@@ -4,6 +4,12 @@ namespace Dien_tich_HCN
 {
     class Program
     {
+        static float tinhdientich(float a, float b)
+        {
+            float dientich = a * b;
+            Console.WriteLine("Dien tich HCN la: " + dientich);
+            return dientich;
+        }
         static void Main(string[] args)
         {
             Console.Write("\n");
@@ -17,10 +23,7 @@ namespace Dien_tich_HCN
             cd = float.Parse(Console.ReadLine());
             Console.Write("Nhap vao chieu rong HCN:\n ");
             cr = float.Parse(Console.ReadLine());
-
-            float dientich = cd * cr;
-            Console.WriteLine("Dien tich HCN la: " + dientich);
-
+            tinhdientich(cd, cr);
         }
     }
 }

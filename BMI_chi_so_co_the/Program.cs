@@ -1,19 +1,12 @@
-﻿using System;
+﻿using System;  
 
 namespace BMI_chi_so_co_the
 {
     class Program
     {
-        static void Main(string[] args)
+        static float tinhbmi(float chieu_cao, float can_nang)
         {
-            float can_nang;
-            float chieu_cao;
             float bmi;
-            Console.WriteLine("Hay nhap vao can nang: ");
-            can_nang = float.Parse(Console.ReadLine());
-            Console.WriteLine("Hay nhap vao chieu cao: ");
-            chieu_cao = float.Parse(Console.ReadLine());
-
             bmi = (can_nang / (chieu_cao * chieu_cao));
             Console.WriteLine("Chi so BMI cua ban la : {0}\n", bmi);
 
@@ -30,6 +23,17 @@ namespace BMI_chi_so_co_the
                 Console.WriteLine("Ban bi benh beo phi\n");
             else
                 Console.WriteLine("Ban nhap sai can nang hoac chieu cao \n");
+            return 0;
+        }
+        static void Main(string[] args)
+        {
+            float can_nang;
+            float chieu_cao;
+            Console.WriteLine("Hay nhap vao can nang: ");
+            can_nang = float.Parse(Console.ReadLine());
+            Console.WriteLine("Hay nhap vao chieu cao: ");
+            chieu_cao = float.Parse(Console.ReadLine());
+            tinhbmi(chieu_cao, can_nang);
         }
     }
 }

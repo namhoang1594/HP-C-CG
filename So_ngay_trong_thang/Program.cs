@@ -4,11 +4,9 @@ namespace So_ngay_trong_thang
 {
     class Program
     {
-        static void Main(string[] args)
+        static int ngaythang(int t)
         {
-            int t, n;
-            Console.WriteLine("Hay nhap thang: ");
-            t = int.Parse(Console.ReadLine());
+            int m;
             if (t <= 1 || t <= 12)
             {
                 switch (t)
@@ -28,13 +26,21 @@ namespace So_ngay_trong_thang
                         Console.WriteLine("Thang {0} co 30 ngay", t); break;
                     case 2:
                         Console.WriteLine("Moi nhap them nam: ");
-                        n = int.Parse(Console.ReadLine());
-                        if ((n % 4 == 0 && n % 100 != 0) || n % 400 == 0)
-                        Console.WriteLine("Thang {0} co 29 ngay", t);
+                        m = int.Parse(Console.ReadLine());
+                        if ((m % 4 == 0 && m % 100 != 0) || m % 400 == 0)
+                            Console.WriteLine("Thang {0} co 29 ngay", t);
                         else Console.WriteLine("Thang {0} co 28 ngay", t); break;
                 }
             }
             else Console.WriteLine("Khong ton tai thang nay");
+            return 0;
+        }
+        static void Main(string[] args)
+        {
+            int t;
+            Console.WriteLine("Hay nhap thang: ");
+            t = int.Parse(Console.ReadLine());
+            ngaythang(t);
         }
     }
 }

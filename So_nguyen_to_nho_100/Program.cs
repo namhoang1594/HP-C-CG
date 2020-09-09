@@ -4,7 +4,7 @@ namespace So_nguyen_to_nho_100
 {
     class Program
     {
-        static void Main(string[] args)
+        static void snt()
         {
             int dem = 0;
             Console.WriteLine("Danh sach so nguyen to :");
@@ -25,5 +25,11 @@ namespace So_nguyen_to_nho_100
                 dem = 0;
             }
         }
+            static void Main(string[] args)
+            {
+
+                snt();
+            }
+        }
     }
-}
+

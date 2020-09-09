@@ -4,6 +4,15 @@ namespace Ung_dung_tinh_tien_lai
 {
     class Program
     {
+        static void tinhtien(double money, int month, double intersetRate)
+        {
+            double totalInterset = 0;
+            for (int i = 0; i < month; i++)
+            {
+                totalInterset = money * (intersetRate / 100) / 12 * 3;
+            }
+            Console.WriteLine("Tong tien lai: " + totalInterset);
+        }
         static void Main(string[] args)
         {
             double money = 1.0;
@@ -16,13 +25,7 @@ namespace Ung_dung_tinh_tien_lai
             month = Int32.Parse(Console.ReadLine());
             Console.WriteLine("So lai suat: ");
             intersetRate = Double.Parse(Console.ReadLine());
-
-            double totalInterset = 0;
-            for (int i = 0; i < month; i++)
-            {
-                totalInterset = money * (intersetRate / 100) / 12 * 3;
-            }
-            Console.WriteLine("Tong tien lai: " + totalInterset);
+            tinhtien(money, month, intersetRate);
         }
     }
 }
